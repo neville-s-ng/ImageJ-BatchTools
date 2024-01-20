@@ -15,7 +15,9 @@ Intended for handling typical light microscopy size datasets (10s-100s of images
 ## Install
 
 - Open ImageJ and click Help -> Update...
-- Click Manage Update Sites, find and enable Batch Tools, click Apply and Close
+- Click Manage Update Sites, find and enable Batch Tools by clicking the checkbox
+- Click Apply and Close then Apply Changes
+- After the updated successfully message appears click Ok and restart ImageJ
 - On the ImageJ Toolbar, click the More Tools ">>" icon and select "Batch Tools"
 
 ## Tools
@@ -60,4 +62,3 @@ Intended for handling typical light microscopy size datasets (10s-100s of images
 ## Acknowledgements
 
 All developers and maintainers of the ImageJ community.
-
