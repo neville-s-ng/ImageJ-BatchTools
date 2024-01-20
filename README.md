@@ -23,7 +23,7 @@ Intended for handling typical light microscopy size datasets (10s-100s of images
 	- For extracting images from common propriatary life science files (Bio-Formats, e.g. .nd2, .lif, .lsm, etc.) to TIFF files
 	- Useful for processing raw data in absence of proprietary software and when multiple samples are saved in a single file
 	- Export each item/series with separate files for separate channels, or single files with merged channels
-	- Processes 1 input file at a time
+	- Processes 1 input file at a time, or all files in a directory
 - Batch Merge
 	- For merging multiple channels into intended channels, useful for merging individual channel files, changing channel assignments or changing channel order
 	- Assumes files have been exported into individual files with channel suffix prior to file extension (e.g. suffix "_ch00.tif" of "Image1_ch00.tif")
