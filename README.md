@@ -2,33 +2,26 @@
 
 Copyright (c) 2014-2024, Neville S. Ng.
 
-All rights reserved. The author assumes no responsibility for its use by other parties, and makes no guarantees, expressed or implied, about its quality, reliability, or any other characteristic. Please acknowledge ImageJ Batch Tools if this software is used in publications or theses. 
+All rights reserved. The author assumes no responsibility for its use by other parties, and makes no guarantees, expressed or implied, about its quality, reliability, or any other characteristic. Please cite and acknowledge ImageJ Batch Tools if this software is used in publications or theses. 
 
 https://sites.imagej.net/BatchTools/
 
 ## Description 
 
-Toolbar to support batch image processing and analysis, including batch extract, batch merge channels, composite conversion, Z-projection, channel B&C and colour adjustment, file export, and cell count, gray value & area.
+Toolbar for batch image processing and analysis including image extraction, channel merge, composite conversion, Z-projection, channel B&C and colour adjustment, file export, and cell area, gray value & count.
 
-Intended for handling small to medium sized datasets (10s-100s of images).
+Intended for handling typical light microscopy size datasets (10s-100s of images). 
 
 ## Install
 
-### Built-in
-
 - Open ImageJ and click Help -> Update...
-- Click Manage Update Sites, find and enable BatchTools
-- On the ImageJ Toolbar, click the More Tools ">>" icon and select "Batch Tools"
-
-### Manual
-- Download "Batch Tools.ijm" into ImageJ\macros\toolsets\
-- Click Plugins -> Macros -> Install... and select "Batch Tools.ijm"
+- Click Manage Update Sites, find and enable Batch Tools, click Apply and Close
 - On the ImageJ Toolbar, click the More Tools ">>" icon and select "Batch Tools"
 
 ## Tools
 - Batch Extract
-	- For extracting images from Bio-Formats compatible files (e.g. .nd2, .lif, .lsm, etc.) to TIFF files
-	- Useful for processing raw data in absence of proprietary software and when multiple samples are stored in a single file
+	- For extracting images from common propriatary life science files (Bio-Formats, e.g. .nd2, .lif, .lsm, etc.) to TIFF files
+	- Useful for processing raw data in absence of proprietary software and when multiple samples are saved in a single file
 	- Export each item/series with separate files for separate channels, or single files with merged channels
 	- Processes 1 input file at a time
 - Batch Merge
@@ -48,26 +41,23 @@ Intended for handling small to medium sized datasets (10s-100s of images).
 	- Adjust channel selection changes the currently selected channel to a different colour
 - Batch Export
 	- Exports all open images as PNG or TIFF
-- Cell Analyser Parameters
-	- Settings should be checked with each experimental analysis before using Cell Analyser
-	- ROI Min and Max can be adjusted by changing "Accept" to "Change" and clicking OK, this requires an open image or a newly opened one to draw example circles to calculate intended areas
-	- Set ROI channel 1 and 2 to the same channel if counting a single labelled target
-	- Set ROI channel 1 to the counterstain (or the smaller area stain) and channel 2 to the mask if counting double labels
-	- Set both ROI channels to 1 if input file is a single channel gray image
-	- Smoothing, Binary and Watershed may help segregate edges of cells particularly with clusters
-	- Entire Image ROI will return the intensity and area of the entire image
-	- Measurement result as summary only will return the total number of objects counted, average mean and intensity rather than every object
 - Cell Analyser
-	- Counts ROIs, areas and intensities with Analyze Particles based on settings defined by the parameters tool, of the currently selected image or a newly opened one
-	- Thresholds for target stain(s) are adjusted with the ImageJ Threshold tool
-	- Data is displayed in Summary table and saved as a .csv file in image file location
+	- Obtains area, mean gray value (intensity), and count of positive objects of an open image in up to 3 channels per run, with option for colocalisation based on settings defined by Cell Analyser Parameters parameters tool 
+	- Optimal settings will vary per experiment
+	- For each analysis channel, select file channel to analyse (0 for none), dependent mask file channel (0 for none), and whether to perform segmentation (watershed) before analysis. Segmentation may assist edge detection in clusters. 
+	- Smoothing may help segregate edges on grainy images
+	- Analysis mode can be set to each individual ROI (default), average of all ROI per image, or entire image (per slice per file)
+	- ROI image can be optionally generated per analysis for review
+	- ROI Min and Max can be adjusted by changing "Accept" to "Change" and clicking OK, this requires an open image or a newly opened one to draw example circles to calculate intended areas
+	- Per run, thresholds for target ROI channels(s) are manually adjusted by user with the ImageJ Threshold tool
+	- Data is saved as a .csv file in image file location
+	- Data for each channel and time point/slice if applicable will be stored in area, mean and count tables cross columns, and ROI down rows
 - Batch Cell Analyser 
 	- Runs cell analyser on all open/newly opened images
-	- First image is used as configuration for thresholding
-	- Note that during analysis, the results window will be opened and may interfere with multitasking
-	- Data is displayed in Summary table and saved as .csv file in image file location
+	- First image is used as configuration for thresholding, or optionally set per image
+	- Along with per-file .csv data, a summary .csv of data from each file is also generated
 
 ## Acknowledgements
 
-All developers and maintainers of the ImageJ community
+All developers and maintainers of the ImageJ community.
 
