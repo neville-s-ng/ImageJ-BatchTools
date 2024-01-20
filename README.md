@@ -1,3 +1,16 @@
+---
+title: ImageJ Batch Tools
+website: "https://imagej.net/plugins/batch-tools"
+release-date: "20 January 2024"
+initial-release-date: "26 June 2014"
+dev-status: stable, active
+update-site: Batch Tools
+
+team-founder: Neville S. Ng
+team-maintainer: Neville S. Ng
+
+---
+
 # ImageJ Batch Tools
 
 Copyright (c) 2014-2024, Neville S. Ng.
@@ -62,3 +75,4 @@ Intended for handling typical light microscopy size datasets (10s-100s of images
 ## Acknowledgements
 
 All developers and maintainers of the ImageJ community.
+
