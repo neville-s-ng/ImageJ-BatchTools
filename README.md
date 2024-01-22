@@ -1,6 +1,5 @@
----
-title: ImageJ Batch Tools
----
+
+# ImageJ Batch Tools
 
 ## Description 
 
