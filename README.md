@@ -1,8 +1,7 @@
 
 # ImageJ Batch Tools
 
-Copyright (c) 2014 - 2024, Neville S. Ng
-All rights reserved
+Copyright (c) 2014 - 2024, Neville S. Ng. All rights reserved.
 
 The author assumes no responsibility for its use by other parties, and makes no guarantees, expressed or implied, about its quality, reliability, or any other characteristic. 
 
