@@ -68,3 +68,4 @@ https://github.com/neville-s-ng/ImageJ-BatchTools/issues
 ## Acknowledgements
 
 All developers and maintainers of the ImageJ community.
+Bug testing: lbaltus 
